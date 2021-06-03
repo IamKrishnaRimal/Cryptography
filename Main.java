@@ -23,7 +23,7 @@ class Main {
         cipherText += (char)encrypt;
     }
 
-    return cipherText;
+    return cipherText.toUpperCase();
   }
 
 
