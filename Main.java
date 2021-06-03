@@ -15,7 +15,7 @@ class Main {
     {
       if(plainText.charAt(i) >= 'a' && plainText.charAt(i) <= 'z')
         base = 'a';
-
+        
         if(plainText.charAt(i) == ' ')
           cipherText += plainText.charAt(i);
 
