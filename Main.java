@@ -42,13 +42,41 @@ class Main {
   }
 
 
+  public static String decryption(String cipherText)
+  {
+    String plainText = "";
+
+    cipherText = cipherText.toUpperCase();
+
+    for(int i = 0; i < cipherText.length(); i++)
+    {
+      if(cipherText.charAt(i) == ' ')
+      {
+        plainText += ' ';
+        continue;
+      }
+
+      for(int j = 0; j < 26; j++)
+      {
+        if(cipherText.charAt(i) == codeChar[j])
+          plainText += normalChar[j];
+      }
+    }
+
+
+    return plainText;
+  }
+
+
 
 
   public static void main(String[] args) {
-    // System.out.println("Hello world!");
     String cipher =  monoEncryption("Rahul Rimal");
 
-    System.out.println(cipher);
+    String decrypt = decryption(cipher);
+    
+    System.out.println("Encrypted: "+cipher);
+    System.out.println("Decrypted: "+ decrypt);
 
 
   }
